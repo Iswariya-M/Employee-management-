@@ -1,0 +1,97 @@
+.step-container {
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+    width: 70%; /* Set the width to 70% of the parent container */
+    max-width: 600px; /* Set a maximum width */
+    margin: 10px auto 20px; /* Center the box horizontally and add 50px margin to the top */
+  }
+  
+  .step-container h2 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 20px; /* Increase space between heading and fields */
+  }
+  
+  .step-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold; /* Make labels bold */
+  }
+  
+  .step-container input,
+  .step-container select {
+    width: calc(100% - 12px); /* Adjust input width */
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .step-container select {
+    width: 100%; /* Ensure select dropdown fills entire width */
+  }
+  
+  .step-container button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .step-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  .radio-buttons input[type="radio"] {
+    display: none;
+  }
+  
+  .radio-buttons label {
+    display: inline-block;
+    margin-right: 15px;
+    cursor: pointer;
+  }
+  
+  .radio-buttons label::before {
+    content: '\25CF';
+    display: inline-block;
+    font-size: 20px;
+    margin-right: 5px;
+  }
+  
+  .radio-buttons input[type="radio"]:checked + label::before {
+    color: #3498db; 
+  }
+
+  .employee-details-container {
+    margin-top: 20px;
+  }
+  
+  .employee-details-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .employee-details-table th, .employee-details-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .employee-details-table th {
+    background-color: #f2f2f2;
+    text-align: left;
+  }
+  
+  .employee-details-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .employee-details-table tr:hover {
+    background-color: #ddd;
+  }
+  

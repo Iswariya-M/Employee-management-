@@ -1,0 +1,74 @@
+<app-employee-form></app-employee-form>
+<div *ngIf="currentPage === 1" class="step-container">
+  <h2> Employee Details</h2>
+  <label>Name: </label>
+  <input type="text" [(ngModel)]="formData.name" /><br />
+  <label>Employee ID: </label>
+  <input type="text" [(ngModel)]="formData.employeeId" /><br />
+  <label>Department: </label>
+  <select [(ngModel)]="formData.department">
+    <option value="CSE">CSE</option>
+    <option value="AIDS">AIDS</option>
+    <option value="IT">IT</option>
+    </select><br />
+  <label>Date of Birth: </label>
+  <input type="date" [(ngModel)]="formData.dob" /><br />
+  <label>Gender: </label>
+  <div class="radio-buttons">
+    <input type="radio" [(ngModel)]="formData.gender" name="gender" id="male" value="Male">
+        <label for="male">Male</label>
+        <input type="radio" [(ngModel)]="formData.gender" name="gender" id="female" value="Female">
+        <label for="female">Female</label>
+  </div><br />
+  <label>Designation: </label>
+  
+  <select [(ngModel)]="formData.designation">
+    <option value="HR">HR</option>
+    <option value="Manager">Manager</option>
+    <option value="Sales">Sales</option>
+    <option value="Intern">Intern</option>
+    </select><br />
+  <label>Salary: </label>
+  <input type="number" [(ngModel)]="formData.salary" /><br />
+  <button (click)="next()">Next</button>
+</div>
+<div *ngIf="currentPage === 2" class="step-container">
+  <h2>Personal Information</h2>
+  <label>Email: </label>
+  <input type="email" [(ngModel)]="formData.email" /><br />
+  <label>Number: </label>
+  <input type="text" [(ngModel)]="formData.number" /><br />
+  <button (click)="submit()">Submit</button>
+  <br>
+  <br>
+  <button (click)="viewDetails()">View Details</button>
+</div>
+
+<div *ngIf="employeeDetails" class="employee-details-container">
+  <h2>Employee Details</h2>
+  <table class="employee-details-table">
+    <tr>
+      <th>Name</th>
+      <th>Employee ID</th>
+      <th>Department</th>
+      <th>Date of Birth</th>
+      <th>Gender</th>
+      <th>Designation</th>
+      <th>Salary</th>
+      <th>Email</th>
+      <th>Number</th>
+      
+    </tr>
+    <tr *ngFor="let employee of employeeDetails">
+      <td>{{ employee.name }}</td>
+      <td>{{ employee.employee_id }}</td>
+      <td>{{ employee.department }}</td>
+      <td>{{ employee.dob }}</td>
+      <td>{{ employee.gender }}</td>
+      <td>{{ employee.designation }}</td>
+      <td>{{ employee.salary }}</td>
+      <td>{{ employee.email}}</td>
+      <td>{{ employee.number }}</td>
+    </tr>
+  </table>
+</div>
